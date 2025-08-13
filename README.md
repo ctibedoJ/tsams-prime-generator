@@ -1,213 +1,135 @@
-# Prime Indexed Möbius Transformation State Space Theory
+# TSAMS Prime Generator
 
-A classical Python implementation of the Prime Indexed Möbius Transformation State Space Theory described in Chapters 16-22 of the textbook.
+A comprehensive toolkit for prime number generation, analysis, and visualization, specifically designed for the Tibedo Structural Algebraic Modeling System (TSAMS) ecosystem.
 
 ## Overview
 
-This package provides computational tools for working with:
+The TSAMS Prime Generator is a specialized Python package that implements advanced mathematical approaches to prime number generation and analysis. It leverages concepts from cyclotomic fields, quantum computing, exceptional Lie algebras, modular forms, and L-functions to provide novel ways of working with prime numbers.
 
-- Cyclotomic fields and their properties
-- Prime indexed Möbius transformations and the 420-root structure
-- State space theory and transformation mechanics
-- The 441-dimensional nodal structure
-- Hair braid dynamics and braid invariants
-- Hyperbolic priming transformations and energy quantization
-- Visualization of mathematical structures and transformations
+This package is part of the broader TSAMS ecosystem, which represents a paradigm shift from hardware-focused to mathematics-focused quantum computing approaches.
+
+## Key Features
+
+### Advanced Prime Generation Algorithms
+
+- **Cyclotomic Sieve**: Generate primes using properties of cyclotomic fields
+- **Quantum Prime Generator**: Simulate quantum interference patterns to identify primes
+- **E8 Lattice Sieve**: Use the exceptional Lie algebra E8 and its associated lattice for prime generation
+- **Zeta Zeros Generator**: Leverage the relationship between Riemann zeta function zeros and prime distribution
+
+### Primality Testing
+
+- **Modular Forms Test**: Test primality using properties of modular forms
+- **L-Function Test**: Use L-functions to determine if a number is prime
+- **Classical Methods**: Miller-Rabin, Fermat, Lucas-Lehmer, and other standard tests
+
+### Visualization Tools
+
+- **Cyclotomic Field Visualization**: Map primes onto the complex plane based on cyclotomic fields
+- **Quantum Interference Patterns**: Visualize quantum signatures of prime numbers
+- **E8 Lattice Projections**: Project primes onto the E8 lattice structure
+- **Modular Forms Zeros**: Explore the relationship between modular form zeros and primes
+- **L-Function Visualization**: Visualize how L-functions encode information about prime distribution
+- **Classical Visualizations**: Ulam spiral, Sacks spiral, prime distribution plots, and more
+
+### Utility Functions
+
+- **Cyclotomic Field Extensions**: Analyze properties of cyclotomic fields and their relation to primes
+- **Quantum Fourier Transform**: Implement QFT for prime-related calculations
+- **E8 Root System**: Generate and work with the E8 root system
+- **Modular Form Coefficients**: Calculate coefficients of modular forms
+- **L-Function Zeros**: Compute zeros of L-functions
+- **Special Prime Sequences**: Generate twin primes, Mersenne primes, and other special prime types
 
 ## Installation
 
 ```bash
-pip install prime_mobius
+pip install tsams-prime-generator
 ```
 
-## Core Components
-
-### 1. Cyclotomic Field Implementation
-- `CyclotomicField` class for representing and working with cyclotomic fields Q(ζ_n)
-- Operations for field elements (addition, multiplication, conjugation, norm)
-- Methods for computing cyclotomic polynomials
-- Galois group representation and operations
-
-### 2. Prime Indexed Möbius Transformations
-- `MoebiusTransformation` class for representing general Möbius transformations
-- `PrimeIndexedMoebiusTransformation` class for the specific transformations indexed by primes
-- The 420-root structure with all 81 transformations
-- Methods for computing fixed points and other properties
-
-### 3. State Space Theory
-- `StateSpace` class for representing the state space
-- State transformations and their compositions
-- Methods for computing orbits and analyzing their properties
-- The 441-dimensional nodal structure and its factorization
-
-### 4. Hair Braid Dynamics
-- The 21 hair braid nodes structure
-- Braid operations and their algebraic properties
-- Methods for computing braid invariants
-
-### 5. Hyperbolic Priming Transformations
-- Hyperbolic priming transformations
-- Energy quantization functions
-- Methods for analyzing the energy spectrum
-
-### 6. Visualization Tools
-- Riemann sphere visualization for Möbius transformations
-- Orbit visualization in 2D and 3D
-- Energy spectrum and statistical analysis plots
-- Nodal structure and hair braid visualization
-- Interactive animations for dynamic processes
-
-## Usage Examples
-
-### Creating a Cyclotomic Field
-
-```python
-from prime_mobius.cyclotomic import CyclotomicField
-
-# Create the cyclotomic field Q(ζ_420)
-field = CyclotomicField(420)
-
-# Get the dimension of the field
-dimension = field.dimension  # 96
-
-# Get the Galois group structure
-galois_group = field.galois_group_structure()
-```
-
-### Working with Prime Indexed Möbius Transformations
-
-```python
-from prime_mobius.moebius import PrimeIndexedMoebiusTransformation, Root420Structure
-
-# Create a prime indexed Möbius transformation
-transformation = PrimeIndexedMoebiusTransformation(11, 420)
-
-# Apply the transformation to a complex number
-result = transformation.apply(1 + 2j)
-
-# Create the 420-root structure
-root_structure = Root420Structure()
-
-# Get all 81 transformations in the structure
-transformations = root_structure.transformations
-```
-
-### State Space Analysis
-
-```python
-from prime_mobius.state_space import StateSpace, NodalStructure441
-
-# Create a state space
-state_space = StateSpace()
-
-# Compute the orbit of a state under a transformation
-orbit = state_space.orbit(1 + 2j, transformation)
-
-# Check if the orbit is dense in the state space
-is_dense = state_space.is_dense(orbit)
-
-# Create the 441-dimensional nodal structure
-nodal_structure = NodalStructure441()
-
-# Get the 21 hair braid nodes
-hair_braid_nodes = nodal_structure.get_hair_braid_nodes()
-```
-
-### Hair Braid Dynamics
-
-```python
-from prime_mobius.hair_braid import HairBraidSystem, BraidOperations
-
-# Create a hair braid system
-hair_braid_system = HairBraidSystem()
-
-# Get a hair braid node
-node = hair_braid_system.get_node(0)
-
-# Apply the braid operation between two nodes
-result = hair_braid_system.braid_operation(0, 1)
-
-# Create braid operations
-braid_operations = BraidOperations()
-
-# Compute the Jones polynomial of a braid
-jones_polynomial = braid_operations.jones_polynomial(braid)
-```
-
-### Energy Quantization
-
-```python
-from prime_mobius.hyperbolic import EnergyQuantization, EnergySpectrum
-
-# Create an energy quantization calculator
-energy_calculator = EnergyQuantization()
-
-# Compute the energy of a transformation
-energy = energy_calculator.energy(transformation)
-
-# Create an energy spectrum analyzer
-energy_spectrum = EnergySpectrum()
-
-# Compute the energy spectrum of the 420-root structure
-spectrum = energy_spectrum.compute_spectrum()
-
-# Compute the total energy
-total_energy = energy_spectrum.total_energy()
-```
-
-### Visualization Examples
-
-```python
-from prime_mobius.visualization import (
-    plot_mobius_transformation,
-    plot_orbit_on_sphere,
-    plot_energy_spectrum,
-    plot_orbit_2d,
-    plot_nodal_structure
-)
-
-# Visualize a Möbius transformation on the Riemann sphere
-fig, axes = plot_mobius_transformation(transformation, save_path="mobius_transformation.png")
-
-# Visualize an orbit on the Riemann sphere
-fig, ax = plot_orbit_on_sphere(orbit, save_path="orbit_on_sphere.png")
-
-# Visualize the energy spectrum
-fig, ax = plot_energy_spectrum(save_path="energy_spectrum.png")
-
-# Visualize an orbit in the complex plane
-fig, ax = plot_orbit_2d(orbit, save_path="orbit_2d.png")
-
-# Visualize the nodal structure
-fig, ax = plot_nodal_structure(save_path="nodal_structure.png")
-```
-
-## Running Tests
-
-The package includes a comprehensive test suite to ensure correctness:
+Or install from source:
 
 ```bash
-# Run all tests
-python -m prime_mobius.tests.run_tests
-
-# Run specific test modules
-python -m unittest prime_mobius.tests.test_moebius
-python -m unittest prime_mobius.tests.test_cyclotomic
-python -m unittest prime_mobius.tests.test_state_space
+git clone https://github.com/yourusername/tsams-prime-generator.git
+cd tsams-prime-generator
+pip install -e .
 ```
 
-## Demo Scripts
+## Quick Start
 
-The package includes several demo scripts to showcase its capabilities:
+```python
+from prime_generator import cyclotomic_sieve, quantum_prime_generator, e8_lattice_sieve
+from prime_generator.visualization import cyclotomic_field_visualization, quantum_interference_pattern
 
-```bash
-# Run the basic demo
-python -m prime_mobius.examples.prime_mobius_demo
+# Generate primes using different methods
+primes_cyclotomic = cyclotomic_sieve(100, conductor=8)
+primes_quantum = quantum_prime_generator(100, qubits=4)
+primes_e8 = e8_lattice_sieve(100)
 
-# Run the visualization demo
-python -m prime_mobius.examples.visualization_demo
+print(f"Cyclotomic sieve: {primes_cyclotomic}")
+print(f"Quantum generator: {primes_quantum}")
+print(f"E8 lattice sieve: {primes_e8}")
+
+# Create visualizations
+cyclotomic_field_visualization(conductor=8, limit=100)
+quantum_interference_pattern(limit=100, qubits=4)
 ```
+
+## Interactive Exploration
+
+The package includes interactive tools for exploring prime numbers:
+
+```python
+from prime_generator.visualization import tsams_prime_explorer
+
+# Launch the interactive explorer
+tsams_prime_explorer(max_limit=1000)
+```
+
+## Mathematical Background
+
+The TSAMS Prime Generator is based on advanced mathematical concepts:
+
+- **Cyclotomic Fields**: Number fields obtained by adjoining roots of unity to the rational numbers
+- **Quantum Computing**: Leveraging quantum interference patterns and phase estimation
+- **E8 Lattice**: The exceptional Lie algebra E8 and its associated lattice structure
+- **Modular Forms**: Complex analytic functions with special transformation properties
+- **L-Functions**: Generalizations of the Riemann zeta function with deep connections to prime numbers
+
+## Integration with TSAMS Ecosystem
+
+This package is designed to work seamlessly with other components of the TSAMS ecosystem:
+
+- **TSAMS Core**: Mathematical framework for structural algebraic modeling
+- **TSAMS Quantum**: Quantum computing implementations
+- **TSAMS Chemistry/Biology/Physics**: Domain-specific applications
+
+## Requirements
+
+- Python 3.8+
+- NumPy
+- Matplotlib
+- SymPy
+- SciPy
+- IPyWidgets (for interactive visualizations)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
+
+## Citation
+
+If you use this package in your research, please cite:
+
+```
+@software{tsams_prime_generator,
+  title = {TSAMS Prime Generator},
+  url = {https://github.com/yourusername/tsams-prime-generator},
+  version = {0.1.0},
+  year = {2025},
+}
+```
+
+## Acknowledgments
+
+This package is part of the Tibedo Structural Algebraic Modeling System (TSAMS).
