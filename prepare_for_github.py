@@ -138,7 +138,7 @@ def main():
     print("   git add .")
     print("   git commit -m 'Initial commit of TSAMS Prime Generator'")
     print("   git branch -M main")
-    print("   git remote add origin https://github.com/ninjatech-ai/tsams-prime-generator.git")
+    print("   git remote add origin https://github.com/yourusername/tsams-prime-generator.git")
     print("   git push -u origin main")
     print("\nThe TSAMS Prime Generator package is ready for GitHub!")
 

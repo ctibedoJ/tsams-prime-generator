@@ -50,7 +50,7 @@ pip install tsams-prime-generator
 Or install from source:
 
 ```bash
-git clone https://github.com/ninjatech-ai/tsams-prime-generator.git
+git clone https://github.com/yourusername/tsams-prime-generator.git
 cd tsams-prime-generator
 pip install -e .
 ```
@@ -123,9 +123,8 @@ If you use this package in your research, please cite:
 
 ```
 @software{tsams_prime_generator,
-  author = {NinjaTech AI},
   title = {TSAMS Prime Generator},
-  url = {https://github.com/ninjatech-ai/tsams-prime-generator},
+  url = {https://github.com/yourusername/tsams-prime-generator},
   version = {0.1.0},
   year = {2025},
 }
@@ -133,4 +132,4 @@ If you use this package in your research, please cite:
 
 ## Acknowledgments
 
-This package is part of the Tibedo Structural Algebraic Modeling System (TSAMS) developed by NinjaTech AI.
+This package is part of the Tibedo Structural Algebraic Modeling System (TSAMS).

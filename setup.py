@@ -25,9 +25,9 @@ setup(
     - Comprehensive utilities for prime number analysis
     """,
     long_description_content_type="text/markdown",
-    author="NinjaTech AI",
-    author_email="info@ninjatech.ai",
-    url="https://github.com/ninjatech-ai/tsams-prime-generator",
+    author="TSAMS Developer",
+    author_email="your.email@example.com",
+    url="https://github.com/yourusername/tsams-prime-generator",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
