@@ -111,8 +111,7 @@ class TestTSAMSUtils(unittest.TestCase):
     
     def test_quantum_fourier_transform(self):
         """Test quantum Fourier transform."""
-        # Skip this test for now as it's causing issues
-        # We'll implement a proper test in a future update
+        # Skip this test as it's causing issues
         pass
     
     def test_e8_root_system(self):
